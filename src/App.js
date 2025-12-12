@@ -1,22 +1,29 @@
 import './App.css';
-function App() {
+import { Component } from 'react';
+import styled from 'styled-components';
+import { Modal } from './components/Modal/Modal.jsx';
+import { Backdrop } from './components/Backdrop/Backdrop.jsx';
+const Button = styled.button`
+
+`
+class App extends Component {
+  render () {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Button>Click me</Button>
+      <div className='backdrop'>
+         <div className='modal'>
+            <div className='modal-content'>
+              <ul className='list'>
+              <li className='item'>
+              <p>hI</p>
+              </li>          
+                  </ul>
+            </div>
+         </div>
+      </div>
     </div>
   );
+}
 }
 export default App;
