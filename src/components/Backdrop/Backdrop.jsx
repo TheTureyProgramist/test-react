@@ -1,8 +1,12 @@
 import React from 'react';
+import styled from 'styled-components';
+const Backdroping = styled.div`
+background: ; 
+`
 export const Backdrop = ({ children, onClose }) => {
     return (
-        <div className="backdrop" onClick={onClose}>
+        <Backdroping onClick={onClose}>
             {children}
-        </div>
+        </Backdroping>
     );
 };
